@@ -1,0 +1,17 @@
+import java.util.*;
+import java.util.stream.*;
+public class Duplicaate
+{
+	public static void main(String[] args) {
+		
+		int arr[]={1,2,3,4,5,6,7};
+		
+		Set<Integer> numset=new HashSet<>();
+		
+	boolean result=	Arrays.stream(arr)
+		        .anyMatch(n->!numset.add(n));
+		        
+		        System.out.println("Array contains duplicate elements ? "+result);
+		       
+		}
+}
